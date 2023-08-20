@@ -5,10 +5,12 @@ pipeline{
 	     step{
 		    echo "This is the building stage" 
 		 }
+	}
 	  stage('test'){
 	      step{
 		     echo "This is the testing step"
 		  }
+    }
 	   stage('deploy'){
 	       step{
 		      echo "This is the deployment stage"
