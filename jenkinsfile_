@@ -1,16 +1,25 @@
-pipeline {
-agent any
-stages {
-stage('build'){
-echo "This is building the file"
-}
-stage('test'){
-echo "This is testing the file"
-}
-stage('deploy'){
-echo "This is deploying the file"
-}
-}
-
+pipeline{
+  agent any
+   stages{
+      stage('build'){
+	     step{
+		    echo "This is the building stage" 
+		 }
+	  stage('test'){
+	      step{
+		     echo "This is the testing step"
+		  }
+	   stage('deploy'){
+	       step{
+		      echo "This is the deployment stage"
+		   }
+	   
+	   }
+	  } 
+	  
+	  }
+   
+   
+   }
 
 }
